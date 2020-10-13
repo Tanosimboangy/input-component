@@ -6,17 +6,28 @@ input {
     box-sizing: border-box;
     border-radius: 8px;
     cursor: pointer;
+    outline: none;
     border: 1px solid #333333;
 }
-
 .default_hover:hover {
-    border: 10px solid #333333;
+    border: 1px solid #333333;
+    outline: none;
 }
-.default_hover:focus {
-    border: 10px solid #2962FF;
+.default_focus:focus {
+    border: 1px solid #2962FF;
+    outline: none;
 }
-.default {
+.error {
     border: 1px solid #D32F2F;
+    outline: none;
+}
+.error:hover {
+    border: 1px solid #333333;
+    outline: none;
+}
+.error:focus {
+    border: 1px solid #D32F2F;
+    outline: none;
 }
 
 /*# sourceMappingURL=/script.75da7f30.css.map */

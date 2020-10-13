@@ -6,10 +6,17 @@ function App() {
     return (
         <div>
             <div>
-                <p>{`<Input />`}</p>
-                <label>Label<br />
-                <Input default_hover="default_hover" />
-                </label>
+                <div>
+                    <p>{`<Input:hover />`}</p>
+                    <label for="head">Label</label><br />
+                    <Input id="head" default_hover="default_hover" />
+                </div>
+                <div>
+                    <p>{`<Input:focus />`}</p>
+                    <label>Label<br />
+                    <Input default_focus="default_focus" />
+                    </label>
+                </div>
             </div>
             <div>
                 <p>{`<Input error />`}</p>

@@ -27,7 +27,7 @@ function App() {
             <div>
                 <p>{`<Input disabled />`}</p>
                 <label>Label<br />
-                <Input />
+                <Input disabled="disabled" />
                 </label>
             </div>
             <div>
@@ -77,7 +77,7 @@ function App() {
             <div>
                 <p>{`<Input fullwidth="md" />`}</p>
                 <label>Label<br />
-                <Input />
+                <Input fillWidth="fillWidth" />
                 </label>
             </div>
             <div>

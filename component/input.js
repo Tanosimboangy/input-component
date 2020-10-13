@@ -9,6 +9,10 @@ function Input(props) {
         classList = `${props.default_focus}`
     } else if (props.error) {
         classList = `${props.error}`
+    } else if (props.disabled) {
+        classList = `${props.disabled}`
+    } else if (props.fillWidth) {
+        classList = `${props.fillWidth}`
     }
     return (<input type="text" placeholder="Placeholder" className={classList}/>)
 }

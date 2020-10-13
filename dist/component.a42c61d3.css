@@ -29,5 +29,17 @@ input {
     border: 1px solid #D32F2F;
     outline: none;
 }
+.disabled {
+    background: #F2F2F2;
+    border: 1px solid #E0E0E0;
+}
+
+
+.fillWidth {
+    width: -webkit-fill-available;
+}
+p {
+    margin-bottom: 5px;
+}
 
 /*# sourceMappingURL=/component.a42c61d3.css.map */

@@ -3,15 +3,20 @@ input {
     padding-bottom: 18px;
     padding-left: 12px;
     padding-right: 108px;
-    border: 1px solid #828282;
     box-sizing: border-box;
     border-radius: 8px;
-}
-/* .input:hover {
+    cursor: pointer;
     border: 1px solid #333333;
-} */
-.default:focus {
-    border: 1px solid #2962FF;
+}
+
+.default_hover:hover {
+    border: 10px solid #333333;
+}
+.default_hover:focus {
+    border: 10px solid #2962FF;
+}
+.default {
+    border: 1px solid #D32F2F;
 }
 
 /*# sourceMappingURL=/script.75da7f30.css.map */

@@ -33,7 +33,8 @@ function App() {
             <div>
                 <p>{`<Input helperText="Some interesting text" />`}</p>
                 <label>Label<br />
-                <Input />
+                <Input /><br/>
+                Some intersting text
                 </label>
             </div>
             <div>

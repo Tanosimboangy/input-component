@@ -6,24 +6,27 @@ function App() {
     return (
         <div>
             <div>
-                <div>
+                <div style={{display:"inline-block"}}>
                     <p>{`<Input:hover />`}</p>
-                    <label for="head">Label<br />
+                    <div style={{display:'flex', flexDirection:'column-reverse'}}>
                         <Input id="head" default_hover="default_hover" />
-                    </label>
+                        <label for="head">Label</label>
+                    </div>
                 </div>
-                <div>
+                <div style={{display:"inline-block"}}> 
                     <p>{`<Input:focus />`}</p>
-                    <label for="focus">Label<br />
+                    <div style={{display:'flex', flexDirection:'column-reverse'}}>
                         <Input id="focus" default_focus="default_focus" />
-                    </label>
+                        <label for="focus" default_focus="default_focus" >Label</label>
+                    </div>
                 </div>
             </div>
-            <div>
+            <div style={{display:'inline-block'}}>
                 <p>{`<Input error />`}</p>
-                <label>Label<br />
-                    <Input error="error" />
-                </label>
+                <div style={{display:'flex', flexDirection:'column-reverse'}}>
+                    <Input id="error" error="error" />
+                    <label for="error">Label</label>
+                </div>
             </div>
             <div>
                 <p>{`<Input disabled />`}</p>

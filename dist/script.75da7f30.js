@@ -28412,19 +28412,50 @@ var _input = _interopRequireDefault(require("./input.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input:hover />"), /*#__PURE__*/_react.default.createElement("label", {
-    for: "head"
-  }, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      display: "inline-block"
+    }
+  }, /*#__PURE__*/_react.default.createElement("p", null, "<Input:hover />"), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column-reverse'
+    }
+  }, /*#__PURE__*/_react.default.createElement(_input.default, {
     id: "head",
     default_hover: "default_hover"
-  }))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input:focus />"), /*#__PURE__*/_react.default.createElement("label", {
-    for: "focus"
-  }, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, {
+  }), /*#__PURE__*/_react.default.createElement("label", {
+    for: "head"
+  }, "Label"))), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      display: "inline-block"
+    }
+  }, /*#__PURE__*/_react.default.createElement("p", null, "<Input:focus />"), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column-reverse'
+    }
+  }, /*#__PURE__*/_react.default.createElement(_input.default, {
     id: "focus",
     default_focus: "default_focus"
-  })))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input error />"), /*#__PURE__*/_react.default.createElement("label", null, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, {
+  }), /*#__PURE__*/_react.default.createElement("label", {
+    for: "focus",
+    default_focus: "default_focus"
+  }, "Label")))), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      display: 'inline-block'
+    }
+  }, /*#__PURE__*/_react.default.createElement("p", null, "<Input error />"), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column-reverse'
+    }
+  }, /*#__PURE__*/_react.default.createElement(_input.default, {
+    id: "error",
     error: "error"
-  }))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input disabled />"), /*#__PURE__*/_react.default.createElement("label", null, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, {
+  }), /*#__PURE__*/_react.default.createElement("label", {
+    for: "error"
+  }, "Label"))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input disabled />"), /*#__PURE__*/_react.default.createElement("label", null, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, {
     disabled: "disabled"
   }))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input helperText=\"Some interesting text\" />"), /*#__PURE__*/_react.default.createElement("label", {
     for: "helperText"

@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+    padding: 1rem;
+}
 input {
     padding-top: 18px;
     padding-bottom: 18px;
@@ -12,17 +16,10 @@ input {
     border: 2px solid #333333;
     outline: none;
 }
-.default_hover:hover + label {
-    color: #333333;
-}
 .default_hover:focus {
     border: 2px solid #2962FF;
     outline: none;
 }
-.default_hover:focus + label {
-    color: #2962FF; 
-}
-
 .error {
     border: 1px solid #D32F2F;
     outline: none;
@@ -47,23 +44,28 @@ input {
 .disabled {
     background: #F2F2F2;
     border: 1px solid #E0E0E0;
+    pointer-events: none;
 }
-/* .helperText {
+.helperText {
     border: 1px solid #828282;
     outline: none;
-} */
-.helperText_error {
-    display: block;
-    border: none;
-    color: #D32F2F;
+}
+.helperText ~ label {
+    color: #828282;
+    font-size: 20px;
+}
+.helperTextErr {
+    border: #D32F2F;
+    outline: none;
+}
+.helperTextErr + label {
+    border: #D32F2F;
+    outline: none;
 }
 
 .fillWidth {
     width: -webkit-fill-available;
 }
-p {
-    margin-top: 3rem;
-    margin-bottom: 5px;
-}
+
 
 /*# sourceMappingURL=/component.a42c61d3.css.map */

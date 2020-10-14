@@ -4,43 +4,34 @@ import Input from "./input.js";
 
 function App() {
     return (
-        <div>
-            <div style={{display:"inline-block"}}>
-                <p>{`<Input:hover />`}</p>
-                <div style={{display:'flex', flexDirection:'column-reverse'}}>
-                    <Input id="head" default_hover="default_hover" />
-                    <label for="head">Label</label>
-                </div>
+        <div style={{display:'flex', flexDirection:'column'}}>
+            <div style={{marginBottom:'1rem'}}>
+                {` < input />`}
+                <Input default_hover="default_hover" label="label" />
             </div>
-            <div style={{display:'inline-block'}}>
-                <p>{`<Input error />`}</p>
-                <div style={{display:'flex', flexDirection:'column-reverse'}}>
-                    <Input id="error" error="error" />
-                    <label for="error">Label</label>
-                </div>
+            <div style={{marginBottom:'1rem'}}>
+                {`<Input error />`}
+                <Input error="error" label="label" />
             </div>
-            <div>
-                <p>{`<Input disabled />`}</p>
-                <label>Label<br />
-                    <Input disabled="disabled" />
-                </label>
+            <div style={{marginBottom:'1rem'}}>
+                {`<Input disabled />`}
+                <Input disabled="disabled" label="label" />
             </div>
-            <div>
-                <p>{`<Input helperText="Some interesting text" />`}</p>
-                <label for="helperText">Label<br />
-                    <Input id="helperText" helperText="helperText" /><br/>
-                    <span>Some intersting text</span>
-                </label>
+            <div style={{marginBottom:'1rem'}}>
+                {`<Input helperText="Some interesting text" />`}
+                <Input helperText="helperText" label="label" />
+                <span>Some intersting text</span>
             </div>
-            <div>
+            {/* <div style={{display:'inline-block', marginRight:'3rem'}}>
                 <p>{`<Input helperText="Some interesting text" error />`}</p>
-                <label>Label<br />
+                <div style={{display:'flex', flexDirection:'column'}}>
                     <Input helperTextErr="helperTextErr" />
+                    <label>Label</label>
                     <span>Some intersting text</span>
-                </label>
-            </div>
-            {/*<div>
-                <p>{`<Input startIcon />`}</p>
+                </div>
+            </div> */}
+            {/*<div style={{display:'inline-block'}}>
+                <p>{ style={{display:'grid'}}`<Input startIcon />`}</p>
                 <label>Label<br />
                 <Input />
                 </label>

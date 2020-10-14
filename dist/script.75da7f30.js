@@ -28376,29 +28376,31 @@ function Input(props) {
 
   if (props.default_hover) {
     classList = "".concat(props.default_hover);
-  } else if (props.default_focus) {
-    classList = "".concat(props.default_focus);
   } else if (props.error) {
     classList = "".concat(props.error);
   } else if (props.disabled) {
     classList = "".concat(props.disabled);
   } else if (props.helperText) {
     classList = "".concat(props.helperText);
+  } else if (props.helperText && props.error) {
+    classList = "".concat(props.helperText, " && ").concat(props.error);
   } else if (props.fillWidth) {
     classList = "".concat(props.fillWidth);
   }
 
-  if (props.helperText && props.error) {
-    classList = "".concat(props.helperText, " error");
-  }
-
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("input", {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column'
+    }
+  }, /*#__PURE__*/_react.default.createElement("label", null, props.label), /*#__PURE__*/_react.default.createElement("input", {
+    style: {
+      width: '250px'
+    },
     type: "text",
-    placeholder: "Placeholder",
-    className: classList
-  }), props.helperText ? /*#__PURE__*/_react.default.createElement("small", {
-    className: props.error ? "helperText_error" : "helperText"
-  }, props.helperText) : "");
+    className: classList,
+    placeholder: "placeholder"
+  }));
 }
 
 var _default = Input;
@@ -28418,44 +28420,40 @@ var _input = _interopRequireDefault(require("./input.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
-    style: {
-      display: "inline-block"
-    }
-  }, /*#__PURE__*/_react.default.createElement("p", null, "<Input:hover />"), /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     style: {
       display: 'flex',
-      flexDirection: 'column-reverse'
+      flexDirection: 'column'
     }
-  }, /*#__PURE__*/_react.default.createElement(_input.default, {
-    id: "head",
-    default_hover: "default_hover"
-  }), /*#__PURE__*/_react.default.createElement("label", {
-    for: "head"
-  }, "Label"))), /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      display: 'inline-block'
+      marginBottom: '1rem'
     }
-  }, /*#__PURE__*/_react.default.createElement("p", null, "<Input error />"), /*#__PURE__*/_react.default.createElement("div", {
+  }, " < input />", /*#__PURE__*/_react.default.createElement(_input.default, {
+    default_hover: "default_hover",
+    label: "label"
+  })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      display: 'flex',
-      flexDirection: 'column-reverse'
+      marginBottom: '1rem'
     }
-  }, /*#__PURE__*/_react.default.createElement(_input.default, {
-    id: "error",
-    error: "error"
-  }), /*#__PURE__*/_react.default.createElement("label", {
-    for: "error"
-  }, "Label"))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input disabled />"), /*#__PURE__*/_react.default.createElement("label", null, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, {
-    disabled: "disabled"
-  }))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input helperText=\"Some interesting text\" />"), /*#__PURE__*/_react.default.createElement("label", {
-    for: "helperText"
-  }, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, {
-    id: "helperText",
-    helperText: "helperText"
-  }), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("span", null, "Some intersting text"))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input helperText=\"Some interesting text\" error />"), /*#__PURE__*/_react.default.createElement("label", null, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, {
-    helperTextErr: "helperTextErr"
-  }), /*#__PURE__*/_react.default.createElement("span", null, "Some intersting text"))));
+  }, "<Input error />", /*#__PURE__*/_react.default.createElement(_input.default, {
+    error: "error",
+    label: "label"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      marginBottom: '1rem'
+    }
+  }, "<Input disabled />", /*#__PURE__*/_react.default.createElement(_input.default, {
+    disabled: "disabled",
+    label: "label"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      marginBottom: '1rem'
+    }
+  }, "<Input helperText=\"Some interesting text\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
+    helperText: "helperText",
+    label: "label"
+  }), /*#__PURE__*/_react.default.createElement("span", null, "Some intersting text")));
 }
 
 var _default = App;

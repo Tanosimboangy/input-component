@@ -5,7 +5,6 @@ input {
     padding-right: 108px;
     box-sizing: border-box;
     border-radius: 8px;
-    cursor: pointer;
     outline: none;
     border: 1px solid #333333;
 }
@@ -16,13 +15,14 @@ input {
 .default_hover:hover + label {
     color: #333333;
 }
-.default_focus:focus {
+.default_hover:focus {
     border: 2px solid #2962FF;
     outline: none;
 }
-.default_focus:focus + label {
+.default_hover:focus + label {
     color: #2962FF; 
 }
+
 .error {
     border: 1px solid #D32F2F;
     outline: none;
@@ -48,14 +48,20 @@ input {
     background: #F2F2F2;
     border: 1px solid #E0E0E0;
 }
-.helperText {
+/* .helperText {
     border: 1px solid #828282;
+    outline: none;
+} */
+.helperText_error {
+    display: block;
+    border: none;
+    color: #D32F2F;
 }
-
 
 .fillWidth {
     width: -webkit-fill-available;
 }
 p {
+    margin-top: 3rem;
     margin-bottom: 5px;
 }

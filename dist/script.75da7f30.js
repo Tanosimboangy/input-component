@@ -28388,11 +28388,17 @@ function Input(props) {
     classList = "".concat(props.fillWidth);
   }
 
-  return /*#__PURE__*/_react.default.createElement("input", {
+  if (props.helperText && props.error) {
+    classList = "".concat(props.helperText, " error");
+  }
+
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("input", {
     type: "text",
     placeholder: "Placeholder",
     className: classList
-  });
+  }), props.helperText ? /*#__PURE__*/_react.default.createElement("small", {
+    className: props.error ? "helperText_error" : "helperText"
+  }, props.helperText) : "");
 }
 
 var _default = Input;
@@ -28412,7 +28418,7 @@ var _input = _interopRequireDefault(require("./input.js"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
     style: {
       display: "inline-block"
     }
@@ -28427,21 +28433,6 @@ function App() {
   }), /*#__PURE__*/_react.default.createElement("label", {
     for: "head"
   }, "Label"))), /*#__PURE__*/_react.default.createElement("div", {
-    style: {
-      display: "inline-block"
-    }
-  }, /*#__PURE__*/_react.default.createElement("p", null, "<Input:focus />"), /*#__PURE__*/_react.default.createElement("div", {
-    style: {
-      display: 'flex',
-      flexDirection: 'column-reverse'
-    }
-  }, /*#__PURE__*/_react.default.createElement(_input.default, {
-    id: "focus",
-    default_focus: "default_focus"
-  }), /*#__PURE__*/_react.default.createElement("label", {
-    for: "focus",
-    default_focus: "default_focus"
-  }, "Label")))), /*#__PURE__*/_react.default.createElement("div", {
     style: {
       display: 'inline-block'
     }
@@ -28462,11 +28453,9 @@ function App() {
   }, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, {
     id: "helperText",
     helperText: "helperText"
-  }), /*#__PURE__*/_react.default.createElement("br", null), "Some intersting text")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input helperText=\"Some interesting text\" error />"), /*#__PURE__*/_react.default.createElement("label", null, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, {
+  }), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("span", null, "Some intersting text"))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input helperText=\"Some interesting text\" error />"), /*#__PURE__*/_react.default.createElement("label", null, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, {
     helperTextErr: "helperTextErr"
-  }), /*#__PURE__*/_react.default.createElement("br", null), "Some intersting text")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input startIcon />"), /*#__PURE__*/_react.default.createElement("label", null, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, null))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input endIcon />"), /*#__PURE__*/_react.default.createElement("label", null, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, null))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input value=\"text\" />"), /*#__PURE__*/_react.default.createElement("label", null, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, null))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input size=\"sm\" />"), /*#__PURE__*/_react.default.createElement("label", null, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, null))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input size=\"md\" />"), /*#__PURE__*/_react.default.createElement("label", null, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, null)))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input fullwidth=\"md\" />"), /*#__PURE__*/_react.default.createElement("label", null, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, {
-    fillWidth: "fillWidth"
-  }))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("p", null, "<Input multiline row=\"4\" />"), /*#__PURE__*/_react.default.createElement("label", null, "Label", /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_input.default, null))));
+  }), /*#__PURE__*/_react.default.createElement("span", null, "Some intersting text"))));
 }
 
 var _default = App;

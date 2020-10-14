@@ -16,7 +16,16 @@ function Input(props) {
     } else if (props.fillWidth) {
         classList = `${props.fillWidth}`
     }
-    return (<input type="text" placeholder="Placeholder" className={classList}/>)
+
+    if (props.helperText && props.error) {
+        classList = `${props.helperText} error`
+    }
+    return (
+        <div>
+            <input type="text" placeholder="Placeholder" className={classList}/>
+            {props.helperText ? <small className={props.error ? "helperText_error" : "helperText"}>{props.helperText}</small> : ""}
+        </div>
+    )
 }
 
 export default Input;

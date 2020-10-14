@@ -5,20 +5,11 @@ import Input from "./input.js";
 function App() {
     return (
         <div>
-            <div>
-                <div style={{display:"inline-block"}}>
-                    <p>{`<Input:hover />`}</p>
-                    <div style={{display:'flex', flexDirection:'column-reverse'}}>
-                        <Input id="head" default_hover="default_hover" />
-                        <label for="head">Label</label>
-                    </div>
-                </div>
-                <div style={{display:"inline-block"}}> 
-                    <p>{`<Input:focus />`}</p>
-                    <div style={{display:'flex', flexDirection:'column-reverse'}}>
-                        <Input id="focus" default_focus="default_focus" />
-                        <label for="focus" default_focus="default_focus" >Label</label>
-                    </div>
+            <div style={{display:"inline-block"}}>
+                <p>{`<Input:hover />`}</p>
+                <div style={{display:'flex', flexDirection:'column-reverse'}}>
+                    <Input id="head" default_hover="default_hover" />
+                    <label for="head">Label</label>
                 </div>
             </div>
             <div style={{display:'inline-block'}}>
@@ -38,17 +29,17 @@ function App() {
                 <p>{`<Input helperText="Some interesting text" />`}</p>
                 <label for="helperText">Label<br />
                     <Input id="helperText" helperText="helperText" /><br/>
-                Some intersting text
+                    <span>Some intersting text</span>
                 </label>
             </div>
             <div>
                 <p>{`<Input helperText="Some interesting text" error />`}</p>
                 <label>Label<br />
-                    <Input helperTextErr="helperTextErr" /><br />
-                Some intersting text
+                    <Input helperTextErr="helperTextErr" />
+                    <span>Some intersting text</span>
                 </label>
             </div>
-            <div>
+            {/*<div>
                 <p>{`<Input startIcon />`}</p>
                 <label>Label<br />
                 <Input />
@@ -91,7 +82,7 @@ function App() {
                 <label>Label<br />
                 <Input />
                 </label>
-            </div>
+            </div> */}
         </div>
     )
 }

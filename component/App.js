@@ -8,39 +8,41 @@ function App() {
             <div>
                 <div>
                     <p>{`<Input:hover />`}</p>
-                    <label for="head">Label</label><br />
-                    <Input id="head" default_hover="default_hover" />
+                    <label for="head">Label<br />
+                        <Input id="head" default_hover="default_hover" />
+                    </label>
                 </div>
                 <div>
                     <p>{`<Input:focus />`}</p>
-                    <label>Label<br />
-                    <Input default_focus="default_focus" />
+                    <label for="focus">Label<br />
+                        <Input id="focus" default_focus="default_focus" />
                     </label>
                 </div>
             </div>
             <div>
                 <p>{`<Input error />`}</p>
                 <label>Label<br />
-                <Input error="error" />
+                    <Input error="error" />
                 </label>
             </div>
             <div>
                 <p>{`<Input disabled />`}</p>
                 <label>Label<br />
-                <Input disabled="disabled" />
+                    <Input disabled="disabled" />
                 </label>
             </div>
             <div>
                 <p>{`<Input helperText="Some interesting text" />`}</p>
-                <label>Label<br />
-                <Input /><br/>
+                <label for="helperText">Label<br />
+                    <Input id="helperText" helperText="helperText" /><br/>
                 Some intersting text
                 </label>
             </div>
             <div>
                 <p>{`<Input helperText="Some interesting text" error />`}</p>
                 <label>Label<br />
-                <Input />
+                    <Input helperTextErr="helperTextErr" /><br />
+                Some intersting text
                 </label>
             </div>
             <div>

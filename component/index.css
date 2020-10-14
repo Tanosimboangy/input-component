@@ -14,7 +14,7 @@ input {
     outline: none;
 }
 .default_focus:focus {
-    border: 1px solid #2962FF;
+    border: 10px solid #2962FF;
     outline: none;
 }
 .error {
@@ -32,6 +32,9 @@ input {
 .disabled {
     background: #F2F2F2;
     border: 1px solid #E0E0E0;
+}
+.helperText {
+    border: 1px solid #828282;
 }
 
 

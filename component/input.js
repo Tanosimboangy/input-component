@@ -11,6 +11,8 @@ function Input(props) {
         classList = `${props.error}`
     } else if (props.disabled) {
         classList = `${props.disabled}`
+    } else if (props.helperText) {
+        classList = `${props.helperText}`
     } else if (props.fillWidth) {
         classList = `${props.fillWidth}`
     }

@@ -9,17 +9,20 @@ function Input(props) {
         classList = `${props.error}`
     } else if (props.disabled) {
         classList = `${props.disabled}`
-    } else if (props.helperText) {
-        classList = `${props.helperText}`
-    } else if (props.helperText && props.error) {
-        classList = `${props.helperText} && ${props.error}`
+    } else if (props.helperTexts) {
+        classList = `${props.helperTexts}`
+    } else if (props.helperTexts && props.error) {
+        classList = `${props.helperTexts} && ${props.error}`
     } else if (props.fillWidth) {
         classList = `${props.fillWidth}`
     } 
     return (
         <div style={{display:'flex', flexDirection:'column'}}>
-            <label>{props.label}</label>
-            <input style={{width:'250px'}} type= "text" className={classList} placeholder="placeholder"/>
+            <input style={{width:'250px', order:'2'}} type= "text" className={classList} 
+            placeholder="placeholder"/>
+            <label style={{order:'1'}}>{props.label}</label>
+            <span style={{order:'3'}}>{props.helperText && props.helperText}
+      </span>
         </div>)
 }
 

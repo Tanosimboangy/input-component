@@ -46,21 +46,15 @@ input {
     border: 1px solid #E0E0E0;
     pointer-events: none;
 }
-.helperText {
+.helperTexts {
     border: 1px solid #828282;
     outline: none;
 }
-.helperText ~ label {
+.helperTexts + label {
     color: #828282;
-    font-size: 20px;
 }
-.helperTextErr {
-    border: #D32F2F;
-    outline: none;
-}
-.helperTextErr + label {
-    border: #D32F2F;
-    outline: none;
+.helperTexts + label + span {
+    color: #828282;
 }
 
 .fillWidth {

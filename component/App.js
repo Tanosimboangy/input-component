@@ -19,17 +19,18 @@ function App() {
             </div>
             <div style={{marginBottom:'1rem'}}>
                 {`<Input helperText="Some interesting text" />`}
-                <Input helperText="helperText" label="label" />
-                <span>Some intersting text</span>
+                <Input 
+                helperTexts="helperTexts" helperText="Some interesting text"
+                label="label" 
+                />
             </div>
-            {/* <div style={{display:'inline-block', marginRight:'3rem'}}>
-                <p>{`<Input helperText="Some interesting text" error />`}</p>
-                <div style={{display:'flex', flexDirection:'column'}}>
-                    <Input helperTextErr="helperTextErr" />
-                    <label>Label</label>
-                    <span>Some intersting text</span>
-                </div>
-            </div> */}
+            <div style={{marginRight:'3rem'}}>
+                {`<Input helperText="Some interesting text" error />`}
+                <Input 
+                helperTexts="helperTexts"  helperText="Some interesting text" error="error"
+                label="label" 
+                />
+            </div>
             {/*<div style={{display:'inline-block'}}>
                 <p>{ style={{display:'grid'}}`<Input startIcon />`}</p>
                 <label>Label<br />

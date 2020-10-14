@@ -28380,10 +28380,10 @@ function Input(props) {
     classList = "".concat(props.error);
   } else if (props.disabled) {
     classList = "".concat(props.disabled);
-  } else if (props.helperText) {
-    classList = "".concat(props.helperText);
-  } else if (props.helperText && props.error) {
-    classList = "".concat(props.helperText, " && ").concat(props.error);
+  } else if (props.helperTexts) {
+    classList = "".concat(props.helperTexts);
+  } else if (props.helperTexts && props.error) {
+    classList = "".concat(props.helperTexts, " && ").concat(props.error);
   } else if (props.fillWidth) {
     classList = "".concat(props.fillWidth);
   }
@@ -28393,14 +28393,23 @@ function Input(props) {
       display: 'flex',
       flexDirection: 'column'
     }
-  }, /*#__PURE__*/_react.default.createElement("label", null, props.label), /*#__PURE__*/_react.default.createElement("input", {
+  }, /*#__PURE__*/_react.default.createElement("input", {
     style: {
-      width: '250px'
+      width: '250px',
+      order: '2'
     },
     type: "text",
     className: classList,
     placeholder: "placeholder"
-  }));
+  }), /*#__PURE__*/_react.default.createElement("label", {
+    style: {
+      order: '1'
+    }
+  }, props.label), /*#__PURE__*/_react.default.createElement("span", {
+    style: {
+      order: '3'
+    }
+  }, props.helperText && props.helperText));
 }
 
 var _default = Input;
@@ -28451,9 +28460,19 @@ function App() {
       marginBottom: '1rem'
     }
   }, "<Input helperText=\"Some interesting text\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
-    helperText: "helperText",
+    helperTexts: "helperTexts",
+    helperText: "Some interesting text",
     label: "label"
-  }), /*#__PURE__*/_react.default.createElement("span", null, "Some intersting text")));
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      marginRight: '3rem'
+    }
+  }, "<Input helperText=\"Some interesting text\" error />", /*#__PURE__*/_react.default.createElement(_input.default, {
+    helperTexts: "helperTexts",
+    helperText: "Some interesting text",
+    error: "error",
+    label: "label"
+  })));
 }
 
 var _default = App;
@@ -28498,7 +28517,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50135" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50114" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

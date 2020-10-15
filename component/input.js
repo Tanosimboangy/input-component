@@ -15,16 +15,20 @@ function Input(props) {
         classList = `${props.helperTexts} && ${props.error}`
     } else if (props.startIcon) {
         classList = `${props.startIcon}`
-    } else if (props.fillWidth) {
+    } else if (props.endIcon) {
+        classList = `${props.endIcon}`
+    } else if (props.text) {
+        classList = `${props.text}`
+    } 
+    else if (props.fillWidth) {
         classList = `${props.fillWidth}`
     } 
     return (
         <div style={{display:'flex', flexDirection:'column'}}>
-            <input style={{width:'250px', order:'2'}} type= "text" className={classList} 
+            <input style={{width:'200px', height:"56px", order:'2'}} type= "text" className={classList} 
             placeholder="placeholder"/>
             <label style={{order:'1'}}>{props.label}</label>
-            <span style={{order:'3'}}>{props.helperText && props.helperText}
-      </span>
+            {props.helperText ? <span style={{order:'3'}}>{props.helperText && props.helperText}</span> : ""}
         </div>)
 }
 

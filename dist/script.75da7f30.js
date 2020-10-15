@@ -28357,7 +28357,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./img\\call_icon.svg":[["call_icon.dfa486a1.svg","component/img/call_icon.svg"],"component/img/call_icon.svg"],"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"component/input.js":[function(require,module,exports) {
+},{"./img\\call_icon.svg":[["call_icon.dfa486a1.svg","component/img/call_icon.svg"],"component/img/call_icon.svg"],"./img\\lock_icon.svg":[["lock_icon.f63001fc.svg","component/img/lock_icon.svg"],"component/img/lock_icon.svg"],"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"component/input.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28386,6 +28386,10 @@ function Input(props) {
     classList = "".concat(props.helperTexts, " && ").concat(props.error);
   } else if (props.startIcon) {
     classList = "".concat(props.startIcon);
+  } else if (props.endIcon) {
+    classList = "".concat(props.endIcon);
+  } else if (props.text) {
+    classList = "".concat(props.text);
   } else if (props.fillWidth) {
     classList = "".concat(props.fillWidth);
   }
@@ -28397,7 +28401,8 @@ function Input(props) {
     }
   }, /*#__PURE__*/_react.default.createElement("input", {
     style: {
-      width: '250px',
+      width: '200px',
+      height: "56px",
       order: '2'
     },
     type: "text",
@@ -28407,11 +28412,11 @@ function Input(props) {
     style: {
       order: '1'
     }
-  }, props.label), /*#__PURE__*/_react.default.createElement("span", {
+  }, props.label), props.helperText ? /*#__PURE__*/_react.default.createElement("span", {
     style: {
       order: '3'
     }
-  }, props.helperText && props.helperText));
+  }, props.helperText && props.helperText) : "");
 }
 
 var _default = Input;
@@ -28438,36 +28443,36 @@ function App() {
     }
   }, /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '1rem'
+      marginBottom: '3rem'
     }
   }, " < input />", /*#__PURE__*/_react.default.createElement(_input.default, {
     default_hover: "default_hover",
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '1rem'
+      marginBottom: '3rem'
     }
   }, "<Input error />", /*#__PURE__*/_react.default.createElement(_input.default, {
     error: "error",
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '1rem'
+      marginBottom: '3rem'
     }
   }, "<Input disabled />", /*#__PURE__*/_react.default.createElement(_input.default, {
     disabled: "disabled",
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '1rem'
+      marginBottom: '3rem'
     }
   }, "<Input helperText=\"Some interesting text\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
     helperTexts: "helperTexts",
     helperText: "Some interesting text",
     label: "label"
-  })), /*#__PURE__*/_react.default.createElement("p", null, "PROBLEMS"), /*#__PURE__*/_react.default.createElement("div", {
+  })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '1rem'
+      marginBottom: '3rem'
     }
   }, "<Input helperText=\"Some interesting text\" error />", /*#__PURE__*/_react.default.createElement(_input.default, {
     helperTexts: "helperTexts",
@@ -28476,10 +28481,20 @@ function App() {
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '1rem'
+      marginBottom: '3rem'
     }
   }, "<Input startIcon />", /*#__PURE__*/_react.default.createElement(_input.default, {
     startIcon: "startIcon",
+    label: "label"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      marginBottom: '3rem'
+    }
+  }, "<Input endIcon />", /*#__PURE__*/_react.default.createElement(_input.default, {
+    endIcon: "endIcon",
+    label: "label"
+  })), /*#__PURE__*/_react.default.createElement("div", null, "<Input value=\"text\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
+    text: "text",
     label: "label"
   })));
 }

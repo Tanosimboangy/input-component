@@ -28394,10 +28394,9 @@ function Input(props) {
     classList = "".concat(props.sm);
   } else if (props.md) {
     classList = "".concat(props.md);
-  } // else if (props.fillWidth) {
-  //     classList = `${props.fillWidth}`
-  // } 
-
+  } else if (props.fillWidth) {
+    classList = "".concat(props.fillWidth);
+  }
 
   return /*#__PURE__*/_react.default.createElement("div", {
     style: {
@@ -28406,8 +28405,6 @@ function Input(props) {
     }
   }, /*#__PURE__*/_react.default.createElement("input", {
     style: {
-      width: '200px',
-      height: "56px",
       order: '2'
     },
     type: "text",
@@ -28443,33 +28440,42 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function App() {
   return /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      display: 'flex',
-      flexDirection: 'column'
+      maxWidth: '800px',
+      margin: 'auto'
     }
-  }, /*#__PURE__*/_react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("h1", {
     style: {
-      marginBottom: '3rem'
+      color: 'blue',
+      fontFamily: 'sans-serif'
+    }
+  }, "Jacquit input component"), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      marginBottom: '3rem',
+      marginInlineEnd: '3rem'
     }
   }, " < input />", /*#__PURE__*/_react.default.createElement(_input.default, {
     default_hover: "default_hover",
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem'
+      marginBottom: '3rem',
+      marginInlineEnd: '3rem'
     }
   }, "<Input error />", /*#__PURE__*/_react.default.createElement(_input.default, {
     error: "error",
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem'
+      marginBottom: '3rem',
+      marginInlineEnd: '3rem'
     }
   }, "<Input disabled />", /*#__PURE__*/_react.default.createElement(_input.default, {
     disabled: "disabled",
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem'
+      marginBottom: '3rem',
+      marginInlineEnd: '3rem'
     }
   }, "<Input helperText=\"Some interesting text\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
     helperTexts: "helperTexts",
@@ -28477,7 +28483,8 @@ function App() {
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem'
+      marginBottom: '3rem',
+      marginInlineEnd: '3rem'
     }
   }, "<Input helperText=\"Some interesting text\" error />", /*#__PURE__*/_react.default.createElement(_input.default, {
     helperTexts: "helperTexts",
@@ -28486,49 +28493,56 @@ function App() {
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem'
+      marginBottom: '3rem',
+      marginInlineEnd: '3rem'
     }
   }, "<Input startIcon />", /*#__PURE__*/_react.default.createElement(_input.default, {
     startIcon: "startIcon",
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem'
+      marginBottom: '3rem',
+      marginInlineEnd: '3rem'
     }
   }, "<Input endIcon />", /*#__PURE__*/_react.default.createElement(_input.default, {
     endIcon: "endIcon",
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem'
+      marginBottom: '3rem',
+      marginInlineEnd: '3rem'
     }
   }, "<Input value=\"text\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
     text: "text",
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem'
+      marginBottom: '3rem',
+      marginInlineEnd: '3rem'
     }
   }, "<Input size=\"sm\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
     sm: "sm",
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem'
+      marginBottom: '3rem',
+      marginInlineEnd: '3rem'
     }
   }, "<Input size=\"md\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
     md: "md",
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem'
+      marginBottom: '3rem',
+      marginInlineEnd: '3rem'
     }
   }, "<Input fullwidth />", /*#__PURE__*/_react.default.createElement(_input.default, {
     fillWidth: "fillWidth",
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem'
+      marginBottom: '3rem',
+      marginInlineEnd: '3rem'
     }
   }, "<Input multiline row=\"4\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
     multiline: "multiline",

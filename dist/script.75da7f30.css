@@ -3,6 +3,7 @@ body {
     padding: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
+    background-color: rgb(230, 229, 229);
 }
 input {
     padding-top: 18px;
@@ -13,14 +14,21 @@ input {
     border-radius: 8px;
     outline: none;
     border: 1px solid #333333;
+    width: 200px;
 }
 .default_hover:hover {
     border: 2px solid #333333;
     outline: none;
 }
+.default_hover:hover + label {
+    color: #333333;
+}
 .default_hover:focus {
     border: 2px solid #2962FF;
     outline: none;
+}
+.default_hover:focus + label {
+    color: #2962FF;
 }
 .error {
     border: 1px solid #D32F2F;
@@ -90,7 +98,7 @@ input {
     height: 56px;
 }
 .fillWidth {
-    width: -webkit-fill-available;
+    width: 100%;
 }
 /* .multiline {
     

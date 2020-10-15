@@ -41,6 +41,15 @@ input {
 .error:focus + label {
     color: #D32F2F;
 }
+.error + label + span {
+    color: #D32F2F;
+}
+.error:hover + label + span {
+    color: #828282;
+}
+.error:focus + label + span {
+    color: #D32F2F;
+}
 .disabled {
     background: #F2F2F2;
     border: 1px solid #E0E0E0;
@@ -56,6 +65,15 @@ input {
 .helperTexts + label + span {
     color: #828282;
 }
+
+.startIcon {
+    padding-left: 40px;
+    background-image: url(./img/call_icon.svg);
+    background-size: 20px;
+    background-position: 5% 50%;
+    background-repeat: no-repeat;
+}
+
 
 .fillWidth {
     width: -webkit-fill-available;

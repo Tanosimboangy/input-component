@@ -13,6 +13,8 @@ function Input(props) {
         classList = `${props.helperTexts}`
     } else if (props.helperTexts && props.error) {
         classList = `${props.helperTexts} && ${props.error}`
+    } else if (props.startIcon) {
+        classList = `${props.startIcon}`
     } else if (props.fillWidth) {
         classList = `${props.fillWidth}`
     } 

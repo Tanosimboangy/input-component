@@ -24,20 +24,19 @@ function App() {
                 label="label" 
                 />
             </div>
-            <div style={{marginRight:'3rem'}}>
+            <p>PROBLEMS</p>
+            <div style={{marginBottom:'1rem'}}>
                 {`<Input helperText="Some interesting text" error />`}
                 <Input 
                 helperTexts="helperTexts"  helperText="Some interesting text" error="error"
                 label="label" 
                 />
             </div>
-            {/*<div style={{display:'inline-block'}}>
-                <p>{ style={{display:'grid'}}`<Input startIcon />`}</p>
-                <label>Label<br />
-                <Input />
-                </label>
+            <div style={{marginBottom:'1rem'}}>
+                {`<Input startIcon />`}
+                <Input startIcon="startIcon" label="label" />
             </div>
-            <div>
+            {/*<div>
                 <p>{`<Input endIcon />`}</p>
                 <label>Label<br />
                 <Input />

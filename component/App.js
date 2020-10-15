@@ -40,36 +40,26 @@ function App() {
                 {`<Input endIcon />`}
                 <Input endIcon="endIcon" label="label" />
             </div>
-            <div>
+            <div style={{marginBottom:'3rem'}}>
                 {`<Input value="text" />`}
                 <Input text="text" label="label" />
             </div>
-            {/*<div>
-                <div>
-                    <p>{`<Input size="sm" />`}</p>
-                    <label>Label<br />
-                    <Input />
-                    </label>
-                </div>
-                <div>
-                    <p>{`<Input size="md" />`}</p>
-                    <label>Label<br />
-                    <Input />
-                    </label>
-                </div>
+            <div style={{marginBottom:'3rem'}}>
+                {`<Input size="sm" />`}
+                <Input sm="sm" label="label" />
             </div>
-            <div>
-                <p>{`<Input fullwidth="md" />`}</p>
-                <label>Label<br />
-                <Input fillWidth="fillWidth" />
-                </label>
+            <div style={{marginBottom:'3rem'}}>
+                {`<Input size="md" />`}
+                <Input md="md" label="label" />
             </div>
-            <div>
-                <p>{`<Input multiline row="4" />`}</p>
-                <label>Label<br />
-                <Input />
-                </label>
-            </div> */}
+            <div style={{marginBottom:'3rem'}}>
+                {`<Input fullwidth />`}
+                <Input fillWidth="fillWidth" label="label" />
+            </div>
+            <div style={{marginBottom:'3rem'}}>
+                {`<Input multiline row="4" />`}
+                <Input multiline="multiline" label="label" />
+            </div>
         </div>
     )
 }

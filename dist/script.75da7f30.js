@@ -28390,9 +28390,14 @@ function Input(props) {
     classList = "".concat(props.endIcon);
   } else if (props.text) {
     classList = "".concat(props.text);
-  } else if (props.fillWidth) {
-    classList = "".concat(props.fillWidth);
-  }
+  } else if (props.sm) {
+    classList = "".concat(props.sm);
+  } else if (props.md) {
+    classList = "".concat(props.md);
+  } // else if (props.fillWidth) {
+  //     classList = `${props.fillWidth}`
+  // } 
+
 
   return /*#__PURE__*/_react.default.createElement("div", {
     style: {
@@ -28493,8 +28498,40 @@ function App() {
   }, "<Input endIcon />", /*#__PURE__*/_react.default.createElement(_input.default, {
     endIcon: "endIcon",
     label: "label"
-  })), /*#__PURE__*/_react.default.createElement("div", null, "<Input value=\"text\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      marginBottom: '3rem'
+    }
+  }, "<Input value=\"text\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
     text: "text",
+    label: "label"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      marginBottom: '3rem'
+    }
+  }, "<Input size=\"sm\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
+    sm: "sm",
+    label: "label"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      marginBottom: '3rem'
+    }
+  }, "<Input size=\"md\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
+    md: "md",
+    label: "label"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      marginBottom: '3rem'
+    }
+  }, "<Input fullwidth />", /*#__PURE__*/_react.default.createElement(_input.default, {
+    fillWidth: "fillWidth",
+    label: "label"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      marginBottom: '3rem'
+    }
+  }, "<Input multiline row=\"4\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
+    multiline: "multiline",
     label: "label"
   })));
 }

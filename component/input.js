@@ -17,12 +17,19 @@ function Input(props) {
         classList = `${props.startIcon}`
     } else if (props.endIcon) {
         classList = `${props.endIcon}`
-    } else if (props.text) {
+    } 
+    else if (props.text) {
         classList = `${props.text}`
     } 
-    else if (props.fillWidth) {
-        classList = `${props.fillWidth}`
+    else if (props.sm) {
+        classList = `${props.sm}`
     } 
+    else if (props.md) {
+        classList = `${props.md}`
+    } 
+    // else if (props.fillWidth) {
+    //     classList = `${props.fillWidth}`
+    // } 
     return (
         <div style={{display:'flex', flexDirection:'column'}}>
             <input style={{width:'200px', height:"56px", order:'2'}} type= "text" className={classList} 

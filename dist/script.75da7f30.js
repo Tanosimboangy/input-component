@@ -28376,6 +28376,8 @@ function Input(props) {
 
   if (props.default_hover) {
     classList = "".concat(props.default_hover);
+  } else if (props.default_focus) {
+    classList = "".concat(props.default_focus);
   } else if (props.error) {
     classList = "".concat(props.error);
   } else if (props.disabled) {
@@ -28450,15 +28452,23 @@ function App() {
     }
   }, "Jacquit input component"), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem',
-      marginInlineEnd: '3rem'
+      marginBottom: '1.5rem',
+      marginInlineEnd: '3rem',
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'space-between'
     }
-  }, " < input />", /*#__PURE__*/_react.default.createElement(_input.default, {
+  }, /*#__PURE__*/_react.default.createElement("div", null, " < input />", /*#__PURE__*/_react.default.createElement(_input.default, {
+    label: "label"
+  })), /*#__PURE__*/_react.default.createElement("div", null, " < input />", /*#__PURE__*/_react.default.createElement(_input.default, {
     default_hover: "default_hover",
     label: "label"
-  })), /*#__PURE__*/_react.default.createElement("div", {
+  })), /*#__PURE__*/_react.default.createElement("div", null, " < input />", /*#__PURE__*/_react.default.createElement(_input.default, {
+    default_focus: "default_focus",
+    label: "label"
+  }))), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem',
+      marginBottom: '1.5rem',
       marginInlineEnd: '3rem'
     }
   }, "<Input error />", /*#__PURE__*/_react.default.createElement(_input.default, {
@@ -28466,7 +28476,7 @@ function App() {
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem',
+      marginBottom: '1.5rem',
       marginInlineEnd: '3rem'
     }
   }, "<Input disabled />", /*#__PURE__*/_react.default.createElement(_input.default, {
@@ -28474,7 +28484,7 @@ function App() {
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem',
+      marginBottom: '1.5rem',
       marginInlineEnd: '3rem'
     }
   }, "<Input helperText=\"Some interesting text\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
@@ -28483,7 +28493,7 @@ function App() {
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem',
+      marginBottom: '1.5rem',
       marginInlineEnd: '3rem'
     }
   }, "<Input helperText=\"Some interesting text\" error />", /*#__PURE__*/_react.default.createElement(_input.default, {
@@ -28493,7 +28503,7 @@ function App() {
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem',
+      marginBottom: '1.5rem',
       marginInlineEnd: '3rem'
     }
   }, "<Input startIcon />", /*#__PURE__*/_react.default.createElement(_input.default, {
@@ -28501,7 +28511,7 @@ function App() {
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem',
+      marginBottom: '1.5rem',
       marginInlineEnd: '3rem'
     }
   }, "<Input endIcon />", /*#__PURE__*/_react.default.createElement(_input.default, {
@@ -28509,7 +28519,7 @@ function App() {
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem',
+      marginBottom: '1.5rem',
       marginInlineEnd: '3rem'
     }
   }, "<Input value=\"text\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
@@ -28517,7 +28527,7 @@ function App() {
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem',
+      marginBottom: '1.5rem',
       marginInlineEnd: '3rem'
     }
   }, "<Input size=\"sm\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
@@ -28525,7 +28535,7 @@ function App() {
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem',
+      marginBottom: '1.5rem',
       marginInlineEnd: '3rem'
     }
   }, "<Input size=\"md\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
@@ -28533,7 +28543,7 @@ function App() {
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem',
+      marginBottom: '1.5rem',
       marginInlineEnd: '3rem'
     }
   }, "<Input fullwidth />", /*#__PURE__*/_react.default.createElement(_input.default, {
@@ -28541,7 +28551,7 @@ function App() {
     label: "label"
   })), /*#__PURE__*/_react.default.createElement("div", {
     style: {
-      marginBottom: '3rem',
+      marginBottom: '1.5rem',
       marginInlineEnd: '3rem'
     }
   }, "<Input multiline row=\"4\" />", /*#__PURE__*/_react.default.createElement(_input.default, {
@@ -28592,7 +28602,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49913" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52815" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

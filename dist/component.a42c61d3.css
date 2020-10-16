@@ -3,7 +3,7 @@ body {
     padding: 1rem;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
-    background-color: rgb(230, 229, 229);
+    background-color: rgb(218, 218, 245);
 }
 input {
     padding-top: 18px;
@@ -23,19 +23,19 @@ input {
 .default_hover:hover + label {
     color: #333333;
 }
-.default_hover:focus {
-    border: 2px solid #2962FF;
+.default_focus:focus {
+    border: 2px solid blue;
     outline: none;
 }
-.default_hover:focus + label {
-    color: #2962FF;
+.default_focus:focus + label {
+    color: blue;
 }
 .error {
-    border: 1px solid #D32F2F;
+    border: 1px solid red;
     outline: none;
 }
 .error + label {
-    color: #D32F2F;
+    color: red;
 }
 .error:hover {
     border: 2px solid #333333;
@@ -45,20 +45,20 @@ input {
     color: #333333;
 }
 .error:focus {
-    border: 2px solid #D32F2F;
+    border: 2px solid red;
     outline: none;
 }
 .error:focus + label {
-    color: #D32F2F;
+    color: red;
 }
 .error + label + span {
-    color: #D32F2F;
+    color: red;
 }
 .error:hover + label + span {
     color: #828282;
 }
 .error:focus + label + span {
-    color: #D32F2F;
+    color: red;
 }
 .disabled {
     background: #F2F2F2;
@@ -79,7 +79,7 @@ input {
     padding-left: 40px;
     background-image: url(/call_icon.dfa486a1.svg);
     background-size: 20px;
-    background-position: 8% 50%;
+    background-position: 6% 50%;
     background-repeat: no-repeat;
 }
 .endIcon {
